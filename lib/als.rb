@@ -1,5 +1,6 @@
 require 'nokogiri'
 require 'zlib'
+require 'drum_rack'
 
 module ALS
 	class Set
@@ -82,7 +83,7 @@ module ALS
 	end
 
 	class MidiTrack
-		attr_reader :clips, :name, :vst_plugin_info
+		attr_reader :clips, :name, :vst_plugin_info, :drum_rack
 
 		def MidiTrack.parse(midi_track_node)
 			name = Track.name(midi_track_node)
@@ -99,13 +100,15 @@ module ALS
 			).map { |clip_node|
 				MidiClip.parse(clip_node)
 			}
-			MidiTrack.new(name, vst_plugin_info, clips)
+			drum_rack = DrumRack.new(midi_track_node.css('DrumGroupDevice'))
+			MidiTrack.new(name, vst_plugin_info, clips, drum_rack)
 		end
 
-		def initialize(name, vst_plugin_info, clips)
+		def initialize(name, vst_plugin_info, clips, drum_rack)
 			@name = name
 			@vst_plugin_info = vst_plugin_info
 			@clips = clips
+			@drum_rack = drum_rack
 		end
 	end
 
