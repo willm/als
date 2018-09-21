@@ -20,6 +20,19 @@ RSpec.describe 'ALS parser' do
 		end
 	end
 
+	context 'when parsing an als file with a simpler' do
+		before(:each) do
+			@als = ALS::Set.load('./spec/als-samples/simpler.als')
+		end
+
+		
+		it 'has a simpler' do
+			simpler = @als.midi_tracks[0].simpler
+			expect(simpler.sample_file).to eq 'Spectral 16.aif'
+			expect(simpler.root_key).to eq 'G#3'
+		end
+	end
+
 	context 'when parsing an als file' do
 		before(:each) do
 			@als = ALS::Set.from_xml_document(get_xml_doc('./spec/als-samples/test-set'))

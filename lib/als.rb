@@ -1,6 +1,7 @@
 require 'nokogiri'
 require 'zlib'
 require 'drum_rack'
+require 'simpler'
 
 module ALS
 	class Set
@@ -83,7 +84,7 @@ module ALS
 	end
 
 	class MidiTrack
-		attr_reader :clips, :name, :vst_plugin_info, :drum_rack
+		attr_reader :clips, :name, :vst_plugin_info, :drum_rack, :simpler
 
 		def MidiTrack.parse(midi_track_node)
 			name = Track.name(midi_track_node)
@@ -101,14 +102,17 @@ module ALS
 				MidiClip.parse(clip_node)
 			}
 			drum_rack = DrumRack.new(midi_track_node.css('DrumGroupDevice'))
-			MidiTrack.new(name, vst_plugin_info, clips, drum_rack)
+
+			simpler = Simpler.new(midi_track_node)
+			MidiTrack.new(name, vst_plugin_info, clips, drum_rack, simpler)
 		end
 
-		def initialize(name, vst_plugin_info, clips, drum_rack)
+		def initialize(name, vst_plugin_info, clips, drum_rack, simpler)
 			@name = name
 			@vst_plugin_info = vst_plugin_info
 			@clips = clips
 			@drum_rack = drum_rack
+			@simpler = simpler
 		end
 	end
 

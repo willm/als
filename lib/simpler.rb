@@ -1,4 +1,6 @@
-class Ableton::Simpler < Ableton
+require 'note_helpers'
+
+class Simpler
 	def initialize(rack_xml)
 		@rack_xml = rack_xml
 	end
@@ -12,7 +14,7 @@ class Ableton::Simpler < Ableton
 	end
 
 	def root_key
-		drum_track_note_to_note_name(@rack_xml.css('MultiSamplePart RootKey').first['Value'])
+		NoteHelpers::drum_track_note_to_note_name(@rack_xml.css('MultiSamplePart RootKey').first['Value'])
 	end
 
 
