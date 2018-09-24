@@ -244,7 +244,6 @@ end
 =end
 end
 
-=begin
 RSpec.describe 'Clip parser' do
   context 'when parsing a real world clip' do
   before(:each) do
@@ -259,4 +258,3 @@ RSpec.describe 'Clip parser' do
   end
   end
 end
-=end

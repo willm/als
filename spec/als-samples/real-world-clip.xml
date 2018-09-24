@@ -1,0 +1,96 @@
+<MidiClip Time="0">
+	<LomId Value="0" />
+	<LomIdView Value="0" />
+	<WarpMarkers>
+		<WarpMarker SecTime="0" BeatTime="0" />
+		<WarpMarker SecTime="0.0146484375" BeatTime="0.03125" />
+	</WarpMarkers>
+	<MarkersGenerated Value="false" />
+	<CurrentStart Value="0" />
+	<CurrentEnd Value="4" />
+	<Loop>
+		<LoopStart Value="0" />
+		<LoopEnd Value="4" />
+		<StartRelative Value="0" />
+		<LoopOn Value="true" />
+		<OutMarker Value="4" />
+		<HiddenLoopStart Value="0" />
+		<HiddenLoopEnd Value="4" />
+	</Loop>
+	<Name Value="BG040_S3_Formant Fish_Pattern2_Mono_Keyboard_Bouncy-Sequence-Lead_Complex2_128_Cm" />
+	<Annotation Value="" />
+	<ColorIndex Value="45" />
+	<LaunchMode Value="0" />
+	<LaunchQuantisation Value="0" />
+	<TimeSignature>
+		<TimeSignatures>
+			<RemoteableTimeSignature>
+				<Numerator Value="4" />
+				<Denominator Value="4" />
+				<Time Value="0" />
+			</RemoteableTimeSignature>
+		</TimeSignatures>
+	</TimeSignature>
+	<Envelopes>
+		<Envelopes />
+	</Envelopes>
+	<ScrollerTimePreserver>
+		<LeftTime Value="0" />
+		<RightTime Value="0" />
+	</ScrollerTimePreserver>
+	<TimeSelection>
+		<AnchorTime Value="0" />
+		<OtherTime Value="0" />
+	</TimeSelection>
+	<Legato Value="false" />
+	<Ram Value="false" />
+	<GrooveSettings>
+		<GrooveId Value="-1" />
+	</GrooveSettings>
+	<Disabled Value="false" />
+	<VelocityAmount Value="0" />
+	<FollowTime Value="4" />
+	<FollowActionA Value="0" />
+	<FollowActionB Value="0" />
+	<FollowChanceA Value="1" />
+	<FollowChanceB Value="0" />
+	<Grid>
+		<FixedNumerator Value="1" />
+		<FixedDenominator Value="16" />
+		<GridIntervalPixel Value="20" />
+		<Ntoles Value="2" />
+		<SnapToGrid Value="true" />
+		<Fixed Value="false" />
+	</Grid>
+	<FreezeStart Value="0" />
+	<FreezeEnd Value="0" />
+	<IsSongTempoMaster Value="false" />
+	<IsWarped Value="true" />
+	<Notes>
+		<KeyTracks>
+			<KeyTrack>
+				<Notes>
+					<MidiNoteEvent Time="0" Duration="4" Velocity="68" OffVelocity="0" IsEnabled="true" />
+				</Notes>
+				<MidiKey Value="48" />
+			</KeyTrack>
+			<KeyTrack>
+				<Notes>
+					<MidiNoteEvent Time="1" Duration="0.25" Velocity="45" OffVelocity="0" IsEnabled="true" />
+					<MidiNoteEvent Time="1.5" Duration="0.25" Velocity="49" OffVelocity="0" IsEnabled="true" />
+					<MidiNoteEvent Time="2" Duration="0.5" Velocity="61" OffVelocity="0" IsEnabled="true" />
+					<MidiNoteEvent Time="2.75" Duration="0.25" Velocity="48" OffVelocity="0" IsEnabled="true" />
+					<MidiNoteEvent Time="3.5" Duration="0.25" Velocity="59" OffVelocity="0" IsEnabled="true" />
+				</Notes>
+				<MidiKey Value="74" />
+			</KeyTrack>
+		</KeyTracks>
+	</Notes>
+	<BankSelectCoarse Value="-1" />
+	<BankSelectFine Value="-1" />
+	<ProgramChange Value="-1" />
+	<NoteEditorFoldInZoom Value="-1" />
+	<NoteEditorFoldInScroll Value="-1" />
+	<NoteEditorFoldOutZoom Value="969" />
+	<NoteEditorFoldOutScroll Value="-257" />
+</MidiClip>
